@@ -20,5 +20,8 @@ public class UserRegistration {
 
 		String first_name = "Abc";
 		System.out.println(first_name + ": " + isValidFirstLastName(first_name));
+		
+		String last_name = "Xyz";
+		System.out.println(last_name + ": " + isValidFirstLastName(last_name));
 	}
 }
