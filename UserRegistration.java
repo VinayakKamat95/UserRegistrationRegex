@@ -30,6 +30,20 @@ public class UserRegistration {
 
 		return m.matches();
 	}
+	
+	public static boolean isValidMobileNumber(String Mobile_Number) {
+
+		String regex = "^[0-9]{2}\\s{1}[0-9]{10}$";
+		Pattern p = Pattern.compile(regex);
+
+		if (Mobile_Number == null) {
+			return false;
+		}
+
+		Matcher m = p.matcher(Mobile_Number);
+
+		return m.matches();
+	}
 
 	public static void main(String[] arg) {
 
@@ -41,5 +55,8 @@ public class UserRegistration {
 		
 		String email = "abc.xyz@bl.co.in";
 		System.out.println(email + ": " + isValidEmail(email));
+		
+		String mobile_number = "91 9876543210";
+		System.out.println(mobile_number + ": " + isValidMobileNumber(mobile_number));
 	}
 }
