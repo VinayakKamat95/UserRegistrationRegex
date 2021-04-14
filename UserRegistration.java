@@ -44,6 +44,20 @@ public class UserRegistration {
 
 		return m.matches();
 	}
+	
+	public static boolean isValidPassword(String Password) {
+
+		String regex = "[]{8,}";
+		Pattern p = Pattern.compile(regex);
+
+		if (Password == null) {
+			return false;
+		}
+
+		Matcher m = p.matcher(Password);
+
+		return m.matches();
+	}
 
 	public static void main(String[] arg) {
 
@@ -58,5 +72,8 @@ public class UserRegistration {
 		
 		String mobile_number = "91 9876543210";
 		System.out.println(mobile_number + ": " + isValidMobileNumber(mobile_number));
+		
+		String password = "Abcd@123";
+		System.out.println(password + ": " + isValidPassword(password));
 	}
 }
