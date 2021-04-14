@@ -1,3 +1,4 @@
+
 import java.util.regex.*;
 
 public class UserRegistration {
@@ -15,6 +16,20 @@ public class UserRegistration {
 
 		return m.matches();
 	}
+	
+	public static boolean isValidEmail(String email) {
+
+		String regex = "^[a-z]+.?[a-z]*@[a-z]+.?(co)?.?[a-z]{0,}$";
+		Pattern p = Pattern.compile(regex);
+
+		if (email == null) {
+			return false;
+		}
+
+		Matcher m = p.matcher(email);
+
+		return m.matches();
+	}
 
 	public static void main(String[] arg) {
 
@@ -23,5 +38,8 @@ public class UserRegistration {
 		
 		String last_name = "Xyz";
 		System.out.println(last_name + ": " + isValidFirstLastName(last_name));
+		
+		String email = "abc.xyz@bl.co.in";
+		System.out.println(email + ": " + isValidEmail(email));
 	}
 }
