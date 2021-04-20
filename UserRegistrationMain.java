@@ -3,6 +3,7 @@ package com.bridgelabz;
 
 public class UserRegistrationMain {
 	
+	/*Main function methods from UserRegistration is called */
 public static void main(String[] arg) {
 		
 	UserRegistration.isValidFirstName();

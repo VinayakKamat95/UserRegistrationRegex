@@ -4,7 +4,9 @@ import java.util.Scanner;
 import java.util.regex.*;
 
 public class UserRegistration {
-
+	
+	/*Method to check valid input firstname with Regex pattern if input ot valid will throw custom exception
+	 * display Not valid and take input again*/
 	public static void isValidFirstName() {
 		try {	
 		System.out.println("firstname");
@@ -18,12 +20,14 @@ public class UserRegistration {
 			 throw new InvalidException("not valid input");
 		 }
 		 System.out.println("firstname :" + first_name);
-		}catch(Exception m){System.out.println("Exception occured: "+m);
+		}catch(InvalidException m){System.out.println("Exception occured: "+m);
 		isValidFirstName();
 		}  
 			 		   
 	}
 	
+	/*Method to check valid input lastname with Regex pattern if input ot valid will throw custom exception
+	 * display Not valid and take input again*/
 	public static void isValidLastName() {
 		try {	
 		System.out.println("lastname");
@@ -37,12 +41,15 @@ public class UserRegistration {
 			 throw new InvalidException("not valid input");
 		 }
 		 System.out.println("lastname :" + lastname);
-		}catch(Exception m){System.out.println("Exception occured: "+m);
+		}catch(InvalidException m){System.out.println("Exception occured: "+m);
 		isValidLastName();
 		}  
 			 		   
 	}
 	
+
+	/*Method to check valid input email with Regex pattern if input ot valid will throw custom exception
+	 * display Not valid and take input again*/
 	public static void isValidEmail() {
 		try {	
 			System.out.println("email");
@@ -56,11 +63,13 @@ public class UserRegistration {
 				 throw new InvalidException("not valid input");
 			 }
 			 System.out.println("email :" + email);
-			}catch(Exception m){System.out.println("Exception occured: "+m);
+			}catch(InvalidException m){System.out.println("Exception occured: "+m);
 			isValidEmail();
 			}  
 	}
 	
+	//*Method to check valid input Mobile_Number with Regex pattern if input ot valid will throw custom 
+	//exception display Not valid and take input again*//
 	public static void isValidMobileNumber()   {
 		try {	
 			System.out.println("Mobile_Number");
@@ -74,11 +83,13 @@ public class UserRegistration {
 				 throw new InvalidException("not valid input");
 			 }
 			 System.out.println("Mobile_Number :" + Mobile_Number);
-			}catch(Exception m){System.out.println("Exception occured: "+m);
+			}catch(InvalidException m){System.out.println("Exception occured: "+m);
 			isValidMobileNumber();
 			}  
 	}
 	
+	/*Method to check valid input password with Regex pattern if input ot valid will throw custom exception
+	 * display Not valid and take input again*/
 	public static void isValidPassword() {
 		try {	
 			System.out.println("Password");
@@ -92,7 +103,7 @@ public class UserRegistration {
 				 throw new InvalidException("not valid input");
 			 }
 			 System.out.println("Password :" + Password);
-			}catch(Exception m){System.out.println("Exception occured: "+m);
+			}catch(InvalidException m){System.out.println("Exception occured: "+m);
 			isValidPassword();
 			}  
 	}
