@@ -1,10 +1,10 @@
 package com.bridgelabz;
 
 /*Custom exception created which extends (parent) Exception class*/
-public class InvalidException extends Exception{
+public class InvalidException extends RuntimeException{
 	
-	 InvalidException(String s){  
-		  super();  
+	public InvalidException(String message){  
+		  super(message);  
 		 } 
 
 }
